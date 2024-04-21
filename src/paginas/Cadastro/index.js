@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, ImageBackground, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import PaginaBase from '../PaginaBase';
 
-export default function Cadastro() {
+export default function Cadastro({ navigation }) {
     const [nome, onChangeNome] = React.useState('');
     const [senha, onChangeSenha] = React.useState('');
     const [confirmaSenha, onChangeConfirmaSenha] = React.useState('');
@@ -70,7 +70,7 @@ export default function Cadastro() {
                             />
                         </View>
 
-                        <TouchableOpacity style={styles.button}>
+                        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')}>
                             <Text style={styles.textoBotao}>Cadastrar</Text>
                         </TouchableOpacity>
                     </View>
