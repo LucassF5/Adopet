@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import PaginaBase from "../PaginaBase";
 import { ScrollView } from "react-native-gesture-handler";
 
@@ -14,12 +14,12 @@ export default function Perfil() {
                             <Text style={styles.perfilTitle}>Perfil</Text>
                             <View>
                                 <Text style={styles.perfilLabel}>Foto</Text>
-                                <Image style={styles.perfilImagem} source={require('../../assets/avatar.png')} />
+                                <Image style={styles.perfilImagem} source={require('../../assets/E.jpg')} />
                                 <Text style={styles.perfilInfo}>Clique na foto para editar</Text>
                             </View>
                             <View>
                                 <Text style={styles.perfilLabel}>Nome</Text>
-                                <Text style={styles.perfilDescription}>Joana Magalhães</Text>
+                                <Text style={styles.perfilDescription}>Lucas Franco</Text>
                             </View>
                             <View>
                                 <Text style={styles.perfilLabel}>Telefone</Text>
@@ -85,6 +85,9 @@ const styles = StyleSheet.create({
     },
     perfilImagem: {
         alignSelf: 'center',
+        width: 150,
+        height: 150,
+        borderRadius: 100
     },
     perfilInfo: {
         color: '#FC7071',
